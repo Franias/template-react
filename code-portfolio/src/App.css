@@ -1,42 +1,111 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  margin: 0;
+  font-family: 'TTSupermolot-Bold', Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #85d4f4ff;
+  padding: 20px 37px;
+}
+
+.navbar-logo img {
+  display: block;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #414abaff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.36px;
+}
+
+.navbar-icons {
+  display: flex;
+  gap: 8px;
+}
+
+.navbar-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+.project-card {
+  width: 274px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-family: 'Roboto Flex', Arial, sans-serif;
+}
+
+.project-image {
+  width: 100%;
+  height: 183px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 0 16px 24px 16px;
+}
+
+.project-title {
+  font-size: 32px;
+  font-weight: 400;
+  color: #292929;
+  margin: 10px 0;
+}
+
+.project-tags {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ed177d;
+  margin: 10px 0;
+}
+
+.project-description {
+  font-size: 16px;
+  font-weight: 300;
+  color: #292929;
+  line-height: 18.75px;
+  margin-bottom: 16px;
+}
+
+.project-button {
+  background-color: #414abaff;
+  color: #ffffff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.36px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.project-button:hover {
+  background-color: #303f9f;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.projects-section {
+  padding: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.projects-list {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 }
