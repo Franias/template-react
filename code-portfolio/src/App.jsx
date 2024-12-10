@@ -16,7 +16,7 @@ function Navbar() {
       </div>
       <ul className="navbar-links">
         <li><a href="#sobreMim">Sobre</a></li>
-        <li><a href="#">Currículo</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
         <li><a href="#meusProjetos">Projetos</a></li>
       </ul>
       <div className="navbar-icons">
@@ -279,7 +279,7 @@ const SkillComponent = () => {
   };
 
   return (
-    <div className="projects-section" style={styles.cardContainer}>
+    <div id='habilidades' className="projects-section" style={styles.cardContainer}>
       <h1 style={titleStyle}>Habilidades</h1>
       <SkillTestList />
       <SkillLanguageList />
