@@ -77,11 +77,23 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'space-between',
     padding: '20px',
-    border: '1px solid #ddd',
+    border: '1px solid #fff',
     borderRadius: '8px',
     maxWidth: '800px',
     margin: '20px auto',
     backgroundColor: '#fff',
+  },
+  projectContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: '20px',
+    border: '1px solid #fff',
+    borderRadius: '8px',
+    maxWidth: '800px',
+    margin: '20px auto',
+    backgroundColor: '#fff',
+    flexWrap: 'wrap',
   },
   textContainer: {
     flex: 1,
@@ -114,7 +126,6 @@ const styles = {
     textIndent: '50px',
   },
   image: {
-    // width: '292px',
     maxWidth: '100%',
     height: '292px',
     borderRadius: '8px',
@@ -243,8 +254,7 @@ const SkillLanguageList = () => {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
-    gap: '6px',
-    paddingLeft: '10px'
+    gap: '6px'
   };
 
   const skillStyle = {
@@ -252,8 +262,7 @@ const SkillLanguageList = () => {
     alignItems: 'center',
     justifyContent: 'space-between',
 	  marginBottom: '8px',
-	  width: '100%',
-    paddingLeft: '10px'
+	  width: '100%'
   };
   
 
@@ -281,9 +290,44 @@ const SkillComponent = () => {
 
   return (
     <div id='curriculo' className="projects-section" style={styles.cardContainer}>
-      <h1 style={titleStyle}>Currículo</h1>
+      <h1 style={titleStyle}>Habilidades</h1>
       <SkillTestList />
       <SkillLanguageList />
+    </div>
+  );
+};
+
+const Header = ({ title = 'Meus', subtitle = 'Projetos' }) => {
+  const headerStyles = {
+    container: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'flex-start',
+      gap: '5px',
+      width: '505px',
+    },
+    title: {
+      fontFamily: 'TTSupermolot-Bold, sans-serif',
+      fontSize: '36px',
+      fontWeight: 400,
+      color: '#292929',
+      margin: 0,
+      lineHeight: '44px',
+    },
+    subtitle: {
+      fontFamily: 'Roboto Flex, sans-serif',
+      fontSize: '80px',
+      fontWeight: 700,
+      color: '#292929',
+      margin: 0,
+      lineHeight: '94px',
+    }
+  };
+
+  return (
+    <div style={headerStyles.container}>
+      <h1 style={headerStyles.title}>{title}</h1>
+      <h2 style={headerStyles.subtitle}>{subtitle}</h2>
     </div>
   );
 };
@@ -298,8 +342,9 @@ function App() {
       <SobreMimCard />
 
       <SkillComponent />
-      <div className="projects-section" style={styles.cardContainer}>
-        <h2 id="meusProjetos" >Meus Projetos</h2>
+      <div className="projects-section" style={styles.projectContainer}>
+      
+      <Header id="meusProjetos" style={styles.textContainer}/>
         <div className="projects-list">
           <ProjectCard 
             imageId={cypress} 
@@ -319,12 +364,12 @@ function App() {
             url="https://github.com/Franias/selenium-bugbank"
 
           />
-          {/* <ProjectCard 
-            imageId="1021:408" 
+          <ProjectCard 
+            imageId={cypress}
             title="Mobile" 
             tags="Android studio, Kotlin" 
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam urna, euismod at porttitor in, dignissim eu mauris. In sem nibh, viverra eu risus sed, accumsan luctus dui. Fusce ex neque, maximus quis dui et, rutrum sollicitudin sem."
-          /> */}
+          /> 
         </div>
       </div>
     </div>
