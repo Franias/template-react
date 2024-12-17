@@ -16,7 +16,7 @@ function Navbar() {
       </div>
       <ul className="navbar-links">
         <li><a href="#sobreMim">Sobre</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#curriculo">Currículo</a></li>
         <li><a href="#meusProjetos">Projetos</a></li>
       </ul>
       <div className="navbar-icons">
@@ -114,7 +114,8 @@ const styles = {
     textIndent: '50px',
   },
   image: {
-    width: '292px',
+    // width: '292px',
+    maxWidth: '100%',
     height: '292px',
     borderRadius: '8px',
     objectFit: 'cover',
@@ -161,13 +162,13 @@ const skillsLangague = [
 const SkillRating = ({ level, maxLevel = 5 }) => {
   const filledCircle = (
     <svg width="24" height="24">
-      <circle cx="12" cy="12" r="10" fill="#40E0D0" />
+      <circle cx="12" cy="12" r="10" fill="#EAB53D" />
     </svg>
   );
 
   const outlinedCircle = (
     <svg width="24" height="24">
-      <circle cx="12" cy="12" r="10" fill="none" stroke="#40E0D0" strokeWidth="2" />
+      <circle cx="12" cy="12" r="10" fill="none" stroke="#EAB53D" strokeWidth="2" />
     </svg>
   );
   
@@ -279,8 +280,8 @@ const SkillComponent = () => {
   };
 
   return (
-    <div id='habilidades' className="projects-section" style={styles.cardContainer}>
-      <h1 style={titleStyle}>Habilidades</h1>
+    <div id='curriculo' className="projects-section" style={styles.cardContainer}>
+      <h1 style={titleStyle}>Currículo</h1>
       <SkillTestList />
       <SkillLanguageList />
     </div>
