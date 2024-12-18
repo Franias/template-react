@@ -55,7 +55,7 @@ const SobreMimCard = () => {
   return (
     <div style={styles.cardContainer}>
       <div style={styles.textContainer}>
-        <h2 id="sobreMim">Sobre mim</h2>
+        <h2 id="sobreMim" style={styles.title}>Sobre mim</h2>
         <p style={styles.descriptionSobre}>
           Desenvolvo testes automatizados utilizando Java, Javascript e SQL, com as ferramentas de automação para front-end, back-end e banco de dados.  
 Trabalho com garantia de qualidade há 5 anos e participo de projetos durante todo o ciclo de desenvolvimento do software, assegurando a execução de testes de código junto aos desenvolvedores e promovendo um melhor refinamento e escrita das histórias de usuário no projeto.
@@ -102,26 +102,26 @@ const styles = {
   greeting: {
     fontSize: '36px',
     color: '#292929',
-    fontFamily: 'TTSupermolot-Bold',
+    fontFamily: 'TTSupermolot-Bold, sans-serif',
     lineHeight: '44.46px',
   },
   name: {
     fontSize: '80px',
     fontWeight: 'bold',
     color: '#292929',
-    fontFamily: 'Roboto Flex',
+    fontFamily: 'Roboto Flex, sans-serif',
     lineHeight: '93.75px',
   },
   description: {
     fontSize: '36px',
     color: '#292929',
-    fontFamily: 'TTSupermolot-Regular',
+    fontFamily: 'TTSupermolot-Regular, sans-serif',
     lineHeight: '44.28px',
   },
   descriptionSobre: {
-    fontSize: '20px',
+    fontSize: '16px',
     color: '#292929',
-    fontFamily:['TTSupermolot-Bold', 'Arial', 'sans-serif'],
+    fontFamily:['Roboto Flex', 'sans-serif'],
     lineHeight: '44.28px',
     textIndent: '50px',
   },
@@ -131,6 +131,11 @@ const styles = {
     borderRadius: '8px',
     objectFit: 'cover',
   }, 
+  title:{
+    fontSize: '36px',
+    color: '#292929',
+    fontFamily: 'TTSupermolot-Bold, sans-serif',
+  }
   
 };
 
@@ -280,9 +285,9 @@ const SkillLanguageList = () => {
 
 const SkillComponent = () => {
   const titleStyle = {
-    fontFamily: 'Roboto Flex, sans-serif',
+    fontFamily: 'TTSupermolot-Bold, sans-serif',
     fontWeight: 700,
-    fontSize: '24px',
+    fontSize: '36px',
     lineHeight: '28px',
     color: '#000000',
     marginBottom: '16px'
@@ -305,6 +310,7 @@ const Header = ({ title = 'Meus', subtitle = 'Projetos' }) => {
       alignItems: 'flex-start',
       gap: '5px',
       width: '505px',
+      paddingBottom: '40px',
     },
     title: {
       fontFamily: 'TTSupermolot-Bold, sans-serif',
